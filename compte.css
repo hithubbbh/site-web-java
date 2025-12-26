@@ -1,0 +1,90 @@
+/* ===== CONTAINER GLOBAL ===== */
+.container {
+  display: flex;
+  height: 100vh; /* prend toute la hauteur de l’écran */
+  font-family: Arial, sans-serif;
+}
+
+/* ===== ZONE GAUCHE ===== */
+.left {
+  width: 50%;                        /* moitié gauche */
+  background-color: #fff0f5;          /* rose pastel vibe bougie */
+  border-right: 2px solid #ffb6c1;    /* séparation élégante */
+  display: flex;
+  justify-content: center;            /* centre horizontalement */
+  align-items: center;                /* centre verticalement */
+  flex-direction: column;
+  padding: 40px;
+}
+
+.left h1 {
+  font-size: 32px;
+  color: #ffb6c1;                     /* rose vif pour le logo */
+  margin: 0;
+}
+
+.left p {
+  font-size: 16px;
+  color: #333;                        /* gris doux pour contraste */
+  margin-top: 10px;
+}
+
+/* ===== ZONE DROITE ===== */
+.right {
+  width: 50%;                         /* moitié droite */
+  height: 100vh;
+  background-color: white;            /* fond blanc pour contraste */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;            /* centre verticalement */
+  align-items: center;                /* centre horizontalement */
+  padding: 40px;
+}
+
+.right h2 {
+  font-size: 24px;
+  color: #ff69b4;                     /* rose vif bougie */
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== FORMULAIRE ===== */
+.right form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+}
+
+.right input[type="email"] {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ffb6c1;          /* contour rose pastel */
+  border-radius: 25px;                /* arrondi élégant */
+  font-size: 14px;
+  background-color: #fff0f5;          /* fond rose clair */
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.right input[type="email"]:focus {
+  border: 1px solid #ff69b4;          /* accent rose vif au focus */
+}
+
+/* ===== BOUTON ===== */
+.right button {
+  padding: 12px;
+  background-color: #f175b3;          /* bouton rose vif */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.right button:hover {
+  background-color: #ff1493;          /* rose plus intense au hover */
+}

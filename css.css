@@ -1,0 +1,203 @@
+/* ===== STRUCTURE DU HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 80px;
+  background-color: #fff0f5;
+  border-bottom: 2px solid #ffb6c1;
+}
+
+/* ===== ZONE GAUCHE ===== */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ===== BOUTON MENU ===== */
+.menu-zone {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn img {
+  width: 28px;
+  height: 28px;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(310deg);
+}
+
+.menu-btn img:hover {
+  filter: invert(40%) sepia(60%) saturate(400%) hue-rotate(310deg);
+}
+
+/* ===== LOGO TEXTE ===== */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.9;
+  margin-left: 5px;
+}
+
+.logo h6 {
+  font-size: 16px;
+  margin: 0;
+  color: #ffb6c1;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffb6c1;
+  text-align: center;
+}
+
+/* ===== PARTIE DROITE ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ===== BARRE DE RECHERCHE ===== */
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffb6c1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.barrederecherche {
+  border: none;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.search-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-button img {
+  width: 22px;
+  height: 22px;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(310deg);
+}
+
+/* ===== ICÔNES ===== */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons img {
+  width: 22px;
+  height: 22px;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(310deg);
+}
+
+.icons img:hover,
+.search-button img:hover {
+  filter: invert(40%) sepia(60%) saturate(400%) hue-rotate(310deg);
+}
+
+/* ===== SIDEBAR ===== 
+.sidebar {
+  position: fixed;
+  top: 0;
+  /*left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff0f5;
+  border-right: 2px solid #ffb6c1;
+  padding: 20px;
+  transition: left 0.3s ease;}*/
+  /* ===== SECTION PRODUITS ===== */
+.produits {
+  display: grid; /* grille pour aligner les cartes */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* espace entre les cartes */
+  padding: 30px;
+  background-color: #fff0f5; /* fond rose pastel vibe bougie */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ===== CARTE PRODUIT ===== */
+.produit {
+  position: relative; /* nécessaire pour que l’icône se place à l’intérieur */
+  background-color: white;
+  border: 1px solid #ffb6c1;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== TITRE PRODUIT ===== */
+.produit h3 {
+  font-size: 18px;
+  color: #ffb6c1;
+  margin-bottom: 10px;
+text-align: left;
+padding-left: 5px;  
+}
+
+/* ===== IMAGE PRODUIT ===== */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ffb6c1;
+}
+
+/* ===== ICÔNE FAVORIS ===== */
+.favoris {
+  position: absolute;   /* positionne l’icône dans la carte */
+  top: 30px;            /* distance du haut */
+  right: 15px;          /* distance du bord droit */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(310deg);
+  transition: transform 0.2s ease;
+}
+
+.favoris:hover {
+  transform: scale(1.2);
+  filter: invert(40%) sepia(60%) saturate(400%) hue-rotate(310deg);
+}
+
+.favoris.active {
+  filter: invert(60%) sepia(90%) saturate(600%) hue-rotate(310deg);
+  transform: scale(1.2);
+}
