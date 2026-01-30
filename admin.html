@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin.js" defer></script>
     <title>Lunaya Bougie</title>
 </head>
 <body>
-    <!-- Sidebar Client -->
     <aside class="sidebar" id="sidebar">
       <!-- Calcul de Cire -->
       <div class="sidebar-feature">
         <a href="calcul-cire.html" class="feature-link">
+          <img src="icone/paragraphe.png" alt="Calcul" class="feature-icon">
           <span class="feature-title">Calcul de cire</span>
         </a>
       </div>
 
-      <!-- Progression de Fidélité -->
-      <div class="sidebar-feature">
-        <a href="progression-fidelite.html" class="feature-link">
-          <span class="feature-title">Ma fidélité</span>
-        </a>
+      <!-- Graphique Fidélité Clients -->
+      <div class="sidebar-chart-container" id="chart-container">
+        <canvas id="fidelite-chart" style="display: none;"></canvas>
+        <div id="chart-empty-message" class="chart-empty-message">Aucune donnée disponible pour le moment</div>
       </div>
       <button class="sidebar-close" id="sidebar-close" aria-label="Fermer la sidebar">×</button>
     </aside>
-    
+
     <header>
 <div class="left">
   <div class="menu-zone"> 
@@ -47,22 +47,12 @@
 
     <div class="icons">
       <a href="nouvelpagecompte.html"><img src="icone/utilisateur.png" alt="Compte"></a>
-      <a href="favoris.html"><img src="icone/panier-dachat-prefere.png" alt="Favoris"></a>
-      <a href="panier.html"><img src="icone/panier.png" alt="Panier"></a>
+     <button id="ajout">Ajouter un Produit</button>  
     </div>
   </section>
 </header>
 
-<!--<div>
-     Sidebar séparée 
-     <div class="sidebar"> 
-        <ul> <li><a href="#">Accueil</a></li> 
-             <li><a href="#">Produits</a></li>
-             <li><a href="#">Contact</a></li> 
-             <li><a href="#">À propos</a></li>
-         </ul> 
-    </div>
-</div>--> 
+
 <div class="tri-container">
   <label for="tri">Trier par :</label>
   <select id="tri">
@@ -78,18 +68,20 @@
 <div class="produits">
   <div class="produit-wrapper">
     <div class="produit"> 
-      <img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-      <img src="icone/panier.png" alt="ajouter panier" class="panier-icon">
-    <img src="image/nounours.jpeg" alt="nounours" class="image">
+        <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div>
+     <img src="image/nounours.jpeg" alt="nounours" class="image">
  
     <h3 class="titre-produit">Pack Bougie Nounours</h3>
        <p class="prix">90 MAD</p>
     </div>
  </div>
   <div class="produit-wrapper">
-    <div class="produit"><img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-    <img src="icone/panier.png" alt="ajouter panier" class="panier-icon">
-    <img src="image/fleur.jpeg" alt="Fleur" class="image">
+       <div class="produit">
+  <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div>  <img src="image/fleur.jpeg" alt="Fleur" class="image">
     
     <h3 class="titre-produit">Bougie Fleur</h3>
       <p class="prix">30 MAD</p>
@@ -97,9 +89,10 @@
   </div>
 
   <div class="produit-wrapper">
-    <div class="produit"><img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-    <img src="icone/panier.png" alt="ajouter panier" class="panier-icon">
-    <img src="image/fleurp.jpeg" alt="fleur pailletée" class="image">
+       <div class="produit">
+  <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div><img src="image/fleurp.jpeg" alt="fleur pailletée" class="image">
     
      <h3 class="titre-produit">Bougie Fleur Pailletée</h3>
     <p class="prix">35 MAD</p>
@@ -107,26 +100,29 @@
   </div>
   <div class="produit-wrapper">
    <div class="produit"> 
-    <img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-    <img src="icone/panier.png" alt="ajouter panier" class="panier-icon">
-    <img src="image/coeur.jpeg" alt="coeur" class="image">
+  <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div>  <img src="image/coeur.jpeg" alt="coeur" class="image">
     
    <h3 class="titre-produit">Bougie Coeur</h3>
      <p class="prix">75 MAD</p> 
       </div> 
   </div>
    <div class="produit-wrapper">
-    <div class="produit"> <img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-    <img src="icone/panier.png" alt="ajouter panier" class="panier-icon">
-    <img src="image/packfloraleR.jpeg" alt="nounours et fleur" class="image">
+       <div class="produit">
+  <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div> <img src="image/packfloraleR.jpeg" alt="nounours et fleur" class="image">
     <h3 class="titre-produit">Pack Bougie Rose</h3>
    <p class="prix">60 MAD</p>
        </div> 
   
   </div>
   <div class="produit-wrapper">
-    <div class="produit"><img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-    <img src="image/packfloralbleu.jpeg" alt="nounours et fleur" class="image">
+       <div class="produit">
+ <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div> <img src="image/packfloralbleu.jpeg" alt="nounours et fleur" class="image">
    
     <h3 class="titre-produit">Pack Bougie Bleu</h3>
      <p class="prix">60 MAD</p>
@@ -134,8 +130,10 @@
   </div>
  
   <div class="produit-wrapper">
-     <div class="produit"><img src="icone/ajouter-aux-favoris.png" alt="ajout favoris" class="favoris">
-    <img src="image/bouquet.jpeg" alt="bouquet" class="image">
+     <div class="produit">
+  <div class="actions"><button class="favoris">Modifier</button>
+     <button class="favoris">Supprimer</button>
+    </div> <img src="image/bouquet.jpeg" alt="bouquet" class="image">
     
      <h3 class="titre-produit">Bouquet de fleur </h3>
     <p class="prix">250 MAD</p>
@@ -171,6 +169,30 @@
 <img id="modal-image"> → l’image agrandie.
 
 <div class="modal-info"> → texte (titre, prix, description, bouton)-->
+
+
+ <!-- Modal Ajouter Produit -->
+<div id="modal-ajout2" class="modal2">
+  <div class="modal-content2">
+    <span class="close2">&times;</span>
+    <h2>Ajouter un Produit</h2>
+    <form id="form-ajout-produit2">
+      <label for="titre">Titre du produit :</label>
+      <input type="text" id="titre" name="titre" required>
+
+      <label for="prix">Prix (MAD) :</label>
+      <input type="number" id="prix" name="prix" required>
+
+      <label for="description">Description :</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="image">Image :</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <button type="submit" class="btn-ajout">Ajouter</button>
+    </form>
+  </div>
+</div>  
 
 </body>
     

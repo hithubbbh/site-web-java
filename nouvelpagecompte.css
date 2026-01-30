@@ -1,0 +1,155 @@
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 80px;
+  background-color: #fff0f5;
+  border-bottom: 2px solid #ffb6c1;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-zone {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn img {
+  width: 28px;
+  height: 28px;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(310deg);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffb6c1;
+}
+
+.logo h6 {
+  font-size: 16px;
+  margin: 0;
+  color: #ffb6c1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons img {
+  width: 22px;
+  height: 22px;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(310deg);
+}
+
+/* ===== PAGE ===== */
+body {
+  background-color: #fff0f5;
+  font-family: Arial, sans-serif;
+}
+
+.titre-page {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ffb6c1;
+}
+
+/* ===== CONTAINER ===== */
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 2px solid #ffb6c1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255,182,193,0.4);
+}
+
+.form-container h3 {
+  color: #ffb6c1;
+  margin-bottom: 15px;
+}
+
+/* ===== FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #ffb6c1;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #d46a92;
+  box-shadow: 0 0 6px rgba(212,106,146,0.3);
+}
+
+/* ===== BOUTONS ===== */
+.btn-connexion {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-connexion:hover {
+  background-color: #fff0f5;
+  color: #ffb6c1;
+  border: 1px solid #ffb6c1;
+}
+
+/* ===== ACTIONS ===== */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}

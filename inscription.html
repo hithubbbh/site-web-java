@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inscription.css">
+   <script src="inscription.js" defer></script>
+    <title>Document</title>
+</head>
+ <header>
+<div class="left">
+  <div class="menu-zone"> 
+    <button class="menu-btn">
+     <img src="icone/paragraphe.png" alt="Menu"> 
+    </button> </div> 
+    <div class="logo"> 
+        <h1>LUNAYA</h1> 
+        <h6>Bougie</h6> 
+    </div></div>
+
+  <section class="header-right">
+    
+
+    <div class="icons">
+      <a href="compte.html"><img src="icone/utilisateur.png" alt="Compte"></a>
+      <a href="favoris.html"><img src="icone/panier-dachat-prefere.png" alt="Favoris"></a>
+      <a href="#"><img src="icone/panier.png" alt="Panier"></a>
+    </div>
+  </section>
+</header>
+
+<body>
+    <h2 class="titre-page">Inscription</h2>
+
+<div class="form-container">
+  <form id="form-login">
+    <div class="form-group">
+      <label for="text">Nom</label><br>
+      <input type="text" id="nom" placeholder="Entrez votre nom" required>
+    </div>
+    <div class="form-group">
+      <label for="text">Prenom</label><br>
+      <input type="text" id="prenom" placeholder="Entrez votre prenom" required>
+    </div>
+    <div class="form-group">
+      <label for="email">E-Mail</label><br>
+      <input type="email" id="email" placeholder="Entrez votre email" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Date de naissance</label><br>
+      <input type="date" id="date" placeholder="Entrez votre date de naissance" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mot de passe</label><br>
+      <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Ressaisissez votre mot de passe</label><br>
+      <input type="password" id="cpassword" placeholder="Confirmer votre mot de passe" required>
+    </div>
+    <button type="submit" class="btn-connexion">S'inscrire</button>
+  </form>
+  
+  <p class="inscription"> Déjà inscrit ? <a href="compte.html" class="lien-inscription">Se connecter</a> </p>
+</body>
+</html>

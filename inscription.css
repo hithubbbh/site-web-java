@@ -76,9 +76,6 @@ header {
 }
 
 
-
-
-
 /* ===== ICÔNES ===== */
 .icons {
   display: flex;
@@ -108,8 +105,7 @@ header {
   border-right: 2px solid #ffb6c1;
   padding: 20px;
   transition: left 0.3s ease;}*/
-  
-
+  /* ===== SECTION PRODUITS ===== */
 /* ===== FORMULAIRE CONNEXION ===== */
 .titre-page {
   text-align: center;

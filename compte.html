@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="compte.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="compte.css">
+  <script src="compte.js" defer></script>
+  <title>Document</title>
 </head>
+  <header>
+<div class="left">
+  <div class="menu-zone"> 
+    <button class="menu-btn">
+     <img src="icone/paragraphe.png" alt="Menu"> 
+    </button> </div> 
+    <div class="logo"> 
+        <h1>LUNAYA</h1> 
+        <h6>Bougie</h6> 
+    </div></div>
 
+  
 
+    <div class="icons">
+      <a href="favoris.html"><img src="icone/panier-dachat-prefere.png" alt="Favoris"></a>
+      <a href="#"><img src="icone/panier.png" alt="Panier"></a>
+    </div>
+  </section>
+</header>
 <body>
-  <div class="container">
-    <div class="left">
-      <h1>LUNAYA</h1>
-      <p>Univers Bougie</p>
+  
+
+<h2 class="titre-page">Se connecter</h2>
+
+<div class="form-container">
+  <form id="form-login">
+    <div class="form-group">
+      <label for="email">E-Mail</label><br>
+      <input type="email" id="email" placeholder="Entrez votre email" required>
     </div>
 
-    <div class="right">
-      <h2>Se connecter ou s'inscrire</h2>
-      <form action="" method="post">
-        <input type="email" placeholder="E-Mail*">
-        <button>Continuer</button>
-      </form>
+    <div class="form-group">
+      <label for="password">Mot de passe</label><br>
+      <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
     </div>
-  </div>
+
+    <button type="submit" class="btn-connexion">Se connecter</button>
+  </form>
+
+  <p class="inscription">
+    Pas encore inscrit ? <a href="inscription.html" class="lien-inscription">  Créer un compte</a>
+  </p>
+</div>
+
 </body>
 </html>
